@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:TestApp.ViewModel"
+             xmlns:local="clr-namespace:TestApp.ViewModel"
+             x:Class="TestApp.LoginPage"
+             Title="LoginPage">
+    <ContentPage.BindingContext>
+        <local:LoginViewModel />
+    </ContentPage.BindingContext>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200" />
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <!--<Image Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Source="/logomsa.jpg"></Image>-->
+        <Image 
+        Grid.Row="0"
+        Grid.Column="0"
+        Grid.ColumnSpan="2"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Source="/logomsa.jpg" />
+        <!--<Label Grid.Row="1"
+               Grid.Column="0"
+               Text="User name1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />-->
+        <Label 
+        Grid.Row="1"
+        Grid.Column="0"
+        Text="Username"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"/>
+        <Entry     
+            Text="{Binding UserName}"
+        Grid.Row="1"
+        Grid.Column="1" 
+        VerticalOptions="Center" />
+
+        <Label Grid.Row="2"
+               Grid.Column="0"
+               Text="Password"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <Entry Grid.Row="2"
+            Grid.Column="1"
+        VerticalOptions="Center" IsPassword="True">
+        </Entry>
+
+        <Button Margin="20"
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            FontSize="Header"
+            FontAttributes="Bold"
+            Text="LOGIN"
+            Clicked="Login"></Button>
+    </Grid>
+</ContentPage>
