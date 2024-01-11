@@ -65,7 +65,7 @@
             Grid.ColumnSpan="2"
             FontSize="Header"
             FontAttributes="Bold"
-            Text="LOGIN"
+            Text="LOGIN."
             Clicked="Login"></Button>
     </Grid>
 </ContentPage>
