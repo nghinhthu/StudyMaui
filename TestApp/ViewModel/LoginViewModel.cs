@@ -1,29 +1,48 @@
-﻿using System.ComponentModel;
+﻿using AuthServices;
+using CommunityToolkit.Mvvm.ComponentModel;
 using System.Windows.Input;
+using TestApp.Helper.Logic;
 
 namespace TestApp.ViewModel
 {
-    public class LoginViewModel : INotifyPropertyChanged
+    public partial class LoginViewModel : ObservableObject
     {
-        private string _userName;
-        private string _password;
-        public LoginViewModel()
+        LoginViewModelHelper _viewModelHelper;
+        public LoginViewModel(LoginViewModelHelper viewModelHelper)
         {
-            UserName = "nghinhthu";
-            Password = "123";
+            _userName = "nghinhthu";
+            _viewModelHelper = viewModelHelper;
+            //LoginCommand = new Command(Login);
         }
-        public string UserName
+        [ObservableProperty]
+        private string _userName;
+        [ObservableProperty]
+        private string _password;
+        public string Message { get; set; }
+
+        public ICommand LoginCommand => new Command(Login);
+
+
+
+        private void Login(object obj)
         {
-            get => _userName; set
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(Password))
             {
-                _userName = value;
-                OnPropertyChanged(nameof(UserName));
+                Message = "Missing username/password";
+                Shell.Current.DisplayAlert("Message", Message, "OK");
+            }
+            //BODataProcessResult result = _viewModelHelper.Login(UserName, Password).Result;
+            BODataProcessResult result = Task.Run(async () => await _viewModelHelper.Login(UserName, Password)).Result;
+            if (result.OK)
+            {
+                Shell.Current.DisplayAlert("Message", result.Message, "OK");
+                Shell.Current.GoToAsync("MainPage");
+            }
+            else
+            {
+                Shell.Current.DisplayAlert("Message", result.Message, "OK");
             }
         }
-        public string Password { get; set; }
-        public string Message { get; set; }
-        public ICommand LoginCommand { get; private set; }
-        public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged(string name) => PropertyChanged.Invoke(this, new PropertyChangedEventArgs(name));
+
     }
 }

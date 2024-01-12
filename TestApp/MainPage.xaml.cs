@@ -26,5 +26,10 @@
         {
             Shell.Current.GoToAsync("KeypadPage");
         }
+
+        private void OnHslClicked(object sender, EventArgs e)
+        {
+            Shell.Current.GoToAsync("HslPage");
+        }
     }
 }

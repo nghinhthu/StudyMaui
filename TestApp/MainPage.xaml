@@ -44,6 +44,11 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnKeypadClicked"
                 HorizontalOptions="Center" />
+            <Button
+                Text="HslColor"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnHslClicked"
+                HorizontalOptions="Center" />
 
         </VerticalStackLayout>
     </ScrollView>
