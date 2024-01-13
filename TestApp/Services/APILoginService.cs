@@ -4,6 +4,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using TestApp.Common;
+using TestApp.Util;
 
 namespace TestApp.Services
 {
@@ -43,11 +44,11 @@ namespace TestApp.Services
                     string content = await response.Content.ReadAsStringAsync();
                     if (!string.IsNullOrEmpty(content))
                     {
-                        BODataProcessResult loginResult = JsonSerializer.Deserialize<BODataProcessResult>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true, PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+                        BODataProcessResult loginResult = DeserializeExtensions.Deserialize<BODataProcessResult>(content);
                         if (loginResult.OK)
                         {
                             string strLoginResult = JsonSerializer.Serialize(loginResult.Content);
-                            UserInfo userInfo = JsonSerializer.Deserialize<UserInfo>(strLoginResult, new JsonSerializerOptions { PropertyNameCaseInsensitive = true, PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+                            UserInfo userInfo = DeserializeExtensions.Deserialize<UserInfo>(strLoginResult);
                             if (userInfo != null)
                             {
                                 result.OK = true;

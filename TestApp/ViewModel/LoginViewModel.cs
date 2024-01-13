@@ -1,6 +1,6 @@
 ﻿using AuthServices;
 using CommunityToolkit.Mvvm.ComponentModel;
-using System.Windows.Input;
+using CommunityToolkit.Mvvm.Input;
 using TestApp.Helper.Logic;
 
 namespace TestApp.ViewModel
@@ -12,7 +12,6 @@ namespace TestApp.ViewModel
         {
             _userName = "nghinhthu";
             _viewModelHelper = viewModelHelper;
-            //LoginCommand = new Command(Login);
         }
         [ObservableProperty]
         private string _userName;
@@ -20,18 +19,14 @@ namespace TestApp.ViewModel
         private string _password;
         public string Message { get; set; }
 
-        public ICommand LoginCommand => new Command(Login);
-
-
-
-        private void Login(object obj)
+        [RelayCommand]
+        async Task Login()
         {
             if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(Password))
             {
                 Message = "Missing username/password";
                 Shell.Current.DisplayAlert("Message", Message, "OK");
             }
-            //BODataProcessResult result = _viewModelHelper.Login(UserName, Password).Result;
             BODataProcessResult result = Task.Run(async () => await _viewModelHelper.Login(UserName, Password)).Result;
             if (result.OK)
             {
@@ -43,6 +38,5 @@ namespace TestApp.ViewModel
                 Shell.Current.DisplayAlert("Message", result.Message, "OK");
             }
         }
-
     }
 }

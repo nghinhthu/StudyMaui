@@ -33,6 +33,7 @@ namespace TestApp
             //    httpClient.DefaultRequestHeaders.Accept.Add(
             //    new MediaTypeWithQualityHeaderValue("application/json"));
             //});
+
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
