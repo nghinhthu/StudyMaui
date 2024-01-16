@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:ThisoApp.ViewModels"
+             x:Class="ThisoApp.Views.UpdateProfilePage"
+             x:DataType="viewmodel:UpdateProfileViewModel"
+             Title="Cập nhật tài khoản"
+             Shell.TitleColor="{StaticResource PrimaryColor}">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label 
+        Grid.Row="1"
+        Grid.Column="0"
+        Text="Họ và tên"
+        Style="{StaticResource FormLabel}"/>
+        <Entry     
+            Text="{Binding FullName}"
+            Grid.Row="1"
+            Grid.Column="1" 
+            VerticalOptions="Center" 
+            Style="{StaticResource FormEntry}"/>
+
+        <Label 
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="Số điện thoại"
+            Style="{StaticResource FormLabel}"/>
+        <Entry 
+            Text="{Binding Mobile}" 
+            Grid.Row="2"
+            Grid.Column="1"
+            VerticalOptions="Center"
+            Style="{StaticResource FormEntry}">
+        </Entry>
+
+        <Label Grid.Row="3"
+               Grid.Column="0"
+               Text="Email"
+               Style="{StaticResource FormLabel}"/>
+        <Entry 
+            Text="{Binding Email}" 
+            Grid.Row="3"
+            Grid.Column="1"
+            VerticalOptions="Center"
+            Style="{StaticResource FormEntry}">
+        </Entry>
+
+        <Label 
+            Grid.Row="4"
+            Grid.Column="0"
+            Text="CCCD/CMND"
+            Style="{StaticResource FormLabel}"/>
+        <Entry 
+            Text="{Binding IDCardNo}" 
+            Grid.Row="4"
+            Grid.Column="1"
+            VerticalOptions="Center"
+            Style="{StaticResource FormEntry}">
+        </Entry>
+
+        <Label 
+            Grid.Row="5"
+            Grid.Column="0"
+            Text="Giới tính"
+            Style="{StaticResource FormLabel}"/>
+        <Picker
+            Grid.Row="5"
+            Grid.Column="1"
+            VerticalOptions="Center"
+            Style="{StaticResource FormEntry}">
+            <Picker.Items>
+                <x:String>Nam</x:String>
+                <x:String>Nữ</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label 
+            Grid.Row="5"
+               Grid.Column="2"
+               Text="Ngày sinh"
+               Style="{StaticResource FormLabel}"/>
+        <DatePicker
+             Grid.Row="5"
+            Grid.Column="3"
+        VerticalOptions="Center"
+            MinimumDate="01/01/1900"
+            MaximumDate="12/31/2005"
+            Date="{Binding DOB}" />
+
+        <Label Grid.Row="6"
+               Grid.Column="0"
+               Text="Tỉnh/Thành phố"
+               Style="{StaticResource FormLabel}"/>
+        <Picker
+            Grid.Row="6"
+            Grid.Column="1"
+            VerticalOptions="Center"
+            Style="{StaticResource FormEntry}">
+            <Picker.Items>
+                <x:String>Hồ Chí Minh</x:String>
+                <x:String>Đà Nẵng</x:String>
+            </Picker.Items>
+        </Picker>
+        <Label Grid.Row="6"
+               Grid.Column="2"
+               Text="Quận/Huyện"
+               Style="{StaticResource FormLabel}"/>
+        <Picker
+            Grid.Row="6"
+            Grid.Column="3"
+            VerticalOptions="Center"
+            Style="{StaticResource FormEntry}">
+            <Picker.Items>
+                <x:String>Quận 1</x:String>
+                <x:String>Quận 3</x:String>
+                <x:String>Quận 4</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Grid.Row="7"
+               Grid.Column="0"
+               Text="Địa chỉ"
+               Style="{StaticResource FormLabel}"/>
+        <Editor 
+            Grid.Row="7"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            VerticalOptions="Center"
+            HeightRequest="60"
+            WidthRequest="250"
+            Text="{Binding Address}"/>
+
+        <Image 
+        Grid.Row="1"
+        Grid.Column="3"
+        Grid.RowSpan="4"
+        Grid.ColumnSpan="2"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+            Margin="0"
+        Source="pose5_rainbow.gif" />
+
+        <Button Style="{StaticResource MaterialIcon}"
+            Grid.Row="8"
+            Grid.Column="3"
+            Grid.RowSpan="1"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"
+            FontSize="20"
+                WidthRequest="150"
+                Margin="10"
+                BackgroundColor="{StaticResource PrimaryColor}"
+            Text="{x:Static viewmodel:Icon.UploadIcon}"
+                Command="{Binding UpdateProfileCommand}"></Button>
+    </Grid>
+</ContentPage>

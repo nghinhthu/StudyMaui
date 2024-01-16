@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "TestApp\TestApp.csproj", "{460CC238-90E7-44A6-80B0-B5104563F7BC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialDesignX", "MaterialDesignX\MaterialDesignX.csproj", "{DDA9D0DB-5A48-4FB5-9D36-7CA370E00B85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThisoApp", "ThisoApp\ThisoApp.csproj", "{57F4ABFB-E2C6-4BF2-9839-19AD50072621}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +21,18 @@ Global
 		{460CC238-90E7-44A6-80B0-B5104563F7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{460CC238-90E7-44A6-80B0-B5104563F7BC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{460CC238-90E7-44A6-80B0-B5104563F7BC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DDA9D0DB-5A48-4FB5-9D36-7CA370E00B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA9D0DB-5A48-4FB5-9D36-7CA370E00B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA9D0DB-5A48-4FB5-9D36-7CA370E00B85}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DDA9D0DB-5A48-4FB5-9D36-7CA370E00B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA9D0DB-5A48-4FB5-9D36-7CA370E00B85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA9D0DB-5A48-4FB5-9D36-7CA370E00B85}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{57F4ABFB-E2C6-4BF2-9839-19AD50072621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F4ABFB-E2C6-4BF2-9839-19AD50072621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F4ABFB-E2C6-4BF2-9839-19AD50072621}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{57F4ABFB-E2C6-4BF2-9839-19AD50072621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F4ABFB-E2C6-4BF2-9839-19AD50072621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57F4ABFB-E2C6-4BF2-9839-19AD50072621}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

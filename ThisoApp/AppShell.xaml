@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ThisoApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ThisoApp"
+    xmlns:views="clr-namespace:ThisoApp.Views"
+    xmlns:icon="clr-namespace:ThisoApp.Common"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutBackgroundColor="AliceBlue"
+    Title="MauiNavigationApp">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage">
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontAwesomeRegular" Glyph="{x:Static icon:FontAwesomeIcon.HomeIcon}" Color="White" Size="50"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="News"
+        ContentTemplate="{DataTemplate views:NewsPage}"
+        Route="NewsPage">
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontAwesomeRegular" Glyph="{x:Static icon:FontAwesomeIcon.DollarSign}" Color="White" Size="50"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Outlet"
+        ContentTemplate="{DataTemplate views:OutletPage}"
+        Route="OutletPage">
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontAwesomeRegular" Glyph="{x:Static icon:FontAwesomeIcon.DollarSign}" Color="White" Size="50"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Promotion"
+        ContentTemplate="{DataTemplate views:PromotionPage}"
+        Route="PromotionPage" >
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontAwesomeRegular" Glyph="{x:Static icon:FontAwesomeIcon.DollarSign}" Color="White" Size="50"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+
+
+    <ShellContent
+        Title="Event"
+        ContentTemplate="{DataTemplate views:EventPage}"
+        Route="EventPage" >
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontAwesomeRegular" Glyph="{x:Static icon:FontAwesomeIcon.DollarSign}" Color="White" Size="50"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Experience Clip"
+        ContentTemplate="{DataTemplate views:ExperienceClipPage}"
+        Route="ExperienceClipPage" >
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontAwesomeRegular" Glyph="{x:Static icon:FontAwesomeIcon.DollarSign}" Color="White" Size="50"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Utilities"
+        ContentTemplate="{DataTemplate views:UtilititiesPage}"
+        Route="UtilititiesPage" >
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontAwesomeRegular" Glyph="{x:Static icon:FontAwesomeIcon.DollarSign}" Color="White" Size="50"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Mall Util"
+        ContentTemplate="{DataTemplate views:MallUtilPage}"
+        Route="MallUtilPage" >
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontAwesomeRegular" Glyph="{x:Static icon:FontAwesomeIcon.DollarSign}" Color="White" Size="50"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="About"
+        ContentTemplate="{DataTemplate views:AboutPage}"
+        Route="AboutPage" >
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontAwesomeRegular" Glyph="{x:Static icon:FontAwesomeIcon.DollarSign}" Color="White" Size="50"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="FAQ"
+        ContentTemplate="{DataTemplate views:FAQPage}"
+        Route="FAQPage" >
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontAwesomeRegular" Glyph="{x:Static icon:FontAwesomeIcon.DollarSign}" Color="White" Size="50"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Update profile"
+        ContentTemplate="{DataTemplate views:UpdateProfilePage}"
+        Route="UpdateProfilePage" >
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontAwesomeRegular" Glyph="{x:Static icon:FontAwesomeIcon.DollarSign}" Color="White" Size="50"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+</Shell>

@@ -1,0 +1,67 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ThisoApp"
+             xmlns:helpers="clr-namespace:ThisoApp.Common"
+             x:Class="ThisoApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="MaterialIcon">
+                <Setter Property="FontFamily" Value="MaterialIcon"></Setter>
+                <Setter Property="FontSize" Value="24"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+            </Style>
+
+            <Style TargetType="Label" x:Key="FontAwesomeIcon">
+                <Setter Property="FontFamily" Value="FontAwesomeRegular"></Setter>
+                <Setter Property="FontSize" Value="24"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+            </Style>
+            <Thickness x:Key="HeadFontSize">20</Thickness>
+            <Thickness x:Key="ButtonFontSize">18</Thickness>
+            <Thickness x:Key="NormalFontSize">14</Thickness>
+            <Thickness x:Key="ButtonMargin">20</Thickness>
+            <!--<Color x:Key="PrimaryColor">#3d8686</Color>-->
+            <Color x:Key="PrimaryColor">#DBB152</Color>
+            <Color x:Key="NormalTextColor">Black</Color>
+            <Color x:Key="ButtonTextColor">White</Color>
+            <Color x:Key="MSAColor">White</Color>
+            <Style TargetType="Button" x:Key="MSAButton">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"></Setter>
+                <Setter Property="Margin" Value="{StaticResource ButtonMargin}"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}"></Setter>
+                <Setter Property="TextColor" Value="{StaticResource ButtonTextColor}"></Setter>
+            </Style>
+
+            <Style TargetType="Label" x:Key="FormLabel">
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="VerticalOptions" Value="Center"></Setter>
+                <!--<Setter Property="HorizontalOptions" Value="Center"></Setter>-->
+            </Style>
+
+            <Style TargetType="Label" x:Key="HeaderLabel">
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="VerticalOptions" Value="Center"></Setter>
+                <Setter Property="FontFamily" Value="PoppinsRegular"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+            </Style>
+
+            <Style TargetType="Entry" x:Key="FormEntry">
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="{StaticResource NormalFontSize}"></Setter>
+            </Style>
+
+            <Style TargetType="Label" x:Key="GridItemLabel">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="VerticalOptions" Value="Center"></Setter>
+                <Setter Property="FontFamily" Value="PoppinsRegular"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>
